@@ -140,4 +140,5 @@ body {
 ::-webkit-scrollbar-thumb {
   height: 50px;
   background-color:#999;
-  -webkit-border-radius:8px
+  -webkit-border-radius:8px;
+}
