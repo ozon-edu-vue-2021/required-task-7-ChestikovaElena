@@ -1,0 +1,144 @@
+@import "reset.css";
+@import "http://maxcdn.bootstrapcdn.com/font-awesome/4.1.0/css/font-awesome.min.css";
+
+*, *:before, *:after {
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Helvetica", Arial, sans-serif;
+  background: #f9f9f9;
+}
+
+#container {
+  width: 320px;
+  background: #FFFFFF;
+  position: relative;
+  margin: 20px auto;
+  overflow: hidden;
+}
+
+.item {
+  height: 70px;
+  border-bottom: 1px solid #dddddd;
+  display: flex;
+  align-items: center;
+  -webkit-font-smoothing: antialiased;
+  font-weight: normal;
+}
+
+.contacts-list {
+  overflow-y: auto;
+}
+
+.contacts-item {
+  font-size: 16px;
+  font-weight: 500;
+}
+
+.contacts-item:hover {
+  background: #efefef;
+  cursor: pointer;
+}
+
+.contacts-item:before {
+  content: '';
+  display: inline-block;
+  vertical-align: middle;
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  background-image: url("../img/default-img.png");
+  background-size: 100%;
+  margin: 10px 15px;
+}
+
+.details-view {
+  position: absolute;
+  left: 0;
+  right: 0;
+  top: 0;
+  bottom: 0;
+  background: #FFFFFF;
+}
+
+.details-view--hidden {
+  left: 9999px;
+}
+
+.contacts-item--details {
+  position: relative;
+  background-image: url("../img/background-active.jpg");
+  -webkit-transition: -webkit-transform 0.25s;
+  transition: -webkit-transform 0.25s;
+  transition: transform 0.25s;
+  transition: transform 0.25s, -webkit-transform 0.25s;
+}
+
+.contacts-item--details:hover {
+  background-image: url("../img/background-active.jpg");
+  cursor: default;
+}
+
+.contacts-item--details:before {
+  margin: 10px 15px 10px 50px;
+}
+
+.back {
+  position: absolute;
+  display: inline-block;
+  vertical-align: middle;
+  left: 0;
+  width: 30px;
+  height: 30px;
+  background-image: url("../img/back-icon.png");
+  background-size: 100%;
+  margin: 20px 5px;
+  cursor: pointer;
+}
+
+.details-list {
+  height: 700px;
+  overflow-y: auto;
+}
+
+.people-title {
+  margin-left: 8px;
+  font-weight: 700;
+  font-size: 16px;
+}
+
+.people-item {
+  margin-left: 15px;
+}
+
+.people-label {
+  margin-left: 15px;
+  font-size: 16px;
+  font-weight: 500;
+}
+
+::-webkit-scrollbar {
+  width:9px;
+  height:9px;
+}
+
+::-webkit-scrollbar-button:start:decrement, 
+::-webkit-scrollbar-button:end:increment{ 
+  display:block;
+  height:0;
+  background-color:transparent;
+}
+
+::-webkit-scrollbar-track-piece {
+  background-color:#FAFAFA;
+  -webkit-border-radius:0;
+  -webkit-border-bottom-right-radius:8px;
+  -webkit-border-bottom-left-radius:8px;
+}
+
+::-webkit-scrollbar-thumb {
+  height: 50px;
+  background-color:#999;
+  -webkit-border-radius:8px;
+}

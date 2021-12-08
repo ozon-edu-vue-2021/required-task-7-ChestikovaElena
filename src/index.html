@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="shortcut icon" href="img/favicon.ico" type="img/x-icon">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Тестовое задание</title>
+</head>
+<body>
+  <div id="container">
+    <div class="list-view">
+      <ul class="contacts-list" id="contacts"></ul>
+    </div>
+
+    <div class="details-view details-view--hidden">
+      <div class="item contacts-item contacts-item--details" id="contact-details"></div>
+      <div>
+        <ul class="details-list" id="details">
+          <li>
+            <ul id="freindsList"></ul>
+          </li>
+          <li>
+            <ul id="nonefreindsList"></ul>
+          </li>
+          <li>
+            <ul id="popularList"></ul>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </div>
+
+  <script type="text/x-handlebars-template" id="usersTemplate">
+    {{#each contacts}}
+      <li class="item contacts-item" id="{{ id }}">
+        {{ name }}
+      </li>
+    {{else}}
+      <li class="item contacts-item">Список пуст</li>
+    {{/each}}
+  </script>
+
+  <script type="text/x-handlebars-template" id="contactDetailsTemplate">
+    <div class="back" data-id="control-back"></div>
+    {{ name }}
+  </script>
+
+  <script type="text/x-handlebars-template" id="peopleTemplate">
+    <h2 class="item people-title">{{ title }}</h2>
+      {{#each people}}
+        <li class="item people-item">
+          <i class="fa fa-male fa-2x"></i>
+          <span class="people-label">{{ this }}</span>
+        </li>
+      {{else}}
+        <li class="item people-item">Список пуст</li>
+      {{/each}}
+  </script>
+
+  <script src="https://cdn.jsdelivr.net/npm/handlebars@latest/dist/handlebars.js"></script>
+  
+</body>
+</html>
